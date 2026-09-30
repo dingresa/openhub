@@ -1,187 +1,187 @@
 # OpenHub
 
-## Idea principal
+## Main idea
 
-**OpenHub** es una plataforma web de minijuegos clásicos, creada por un programador valenciano como proyecto de aprendizaje en programación web.
+**OpenHub** is a web platform of classic minigames, created by a developer from Valencia (Spain) as a learning project in web programming.
 
-La idea es ofrecer un selector de minijuegos accesible desde cualquier navegador y dispositivo, siempre que haya conexión a internet, sin instalar nada. Basta con abrir la página, iniciar sesión y jugar.
+The idea is to offer a minigame selector that is accessible from any browser and any device, as long as there is an internet connection, with nothing to install. Just open the page, log in and play.
 
-Es un proyecto **libre y de código abierto**. Todos los juegos están desarrollados por el autor del proyecto, y cualquier persona puede estudiarlos, modificarlos, mejorarlos, corregir errores o proponer cambios mediante *issues* y *pull requests*.
-
----
-
-## Licencia
-
-- **Código:** [GNU Affero General Public License v3.0 o posterior](https://www.gnu.org/licenses/agpl-3.0.html) (`AGPL-3.0-or-later`). Puedes usar, estudiar, modificar y compartir el código, pero cualquier versión modificada que se ofrezca a través de una red también debe publicar su código fuente bajo la misma licencia.
-- **Imágenes y recursos gráficos:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es), salvo que se indique lo contrario.
-- **Nombre y logotipo:** el nombre "OpenHub" y su logotipo identifican el proyecto original. Si haces un *fork*, por favor usa un nombre distinto.
-
-El texto completo de la licencia está en el archivo [`LICENSE`](LICENSE).
+It is a **free and open source** project. All the games are developed by the project's author, and anyone can study them, modify them, improve them, fix bugs or propose changes through *issues* and *pull requests*.
 
 ---
 
-## Estructura general del proyecto
+## License
+
+- **Code:** [GNU Affero General Public License v3.0 or later](https://www.gnu.org/licenses/agpl-3.0.html) (`AGPL-3.0-or-later`). You can use, study, modify and share the code, but any modified version offered over a network must also publish its source code under the same license.
+- **Images and graphic assets:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en), unless otherwise stated.
+- **Name and logo:** the name "OpenHub" and its logo identify the original project. If you make a fork, please use a different name.
+
+The full text of the license is in the [`LICENSE`](LICENSE) file.
+
+---
+
+## Project structure
 
 ```
 📂 openhub/
 ├── 📄 index.html
-├── 📄 css.html
-├── 📁 imagenes/
+├── 📄 styles.css
+├── 📁 images/
 │       ├── 📁 logo/
-│       ├── 📁 fondos/
-│       ├── 📁 iconos/
-│       └── 📁 portadas/
-├── 📁 menusjuegos/
+│       ├── 📁 backgrounds/
+│       ├── 📁 icons/
+│       └── 📁 covers/
+├── 📁 menu/
 │       └── 📄 menu.html
-└── 📁 juegos/
-        ├── 📄 minijuegos.html
+└── 📁 games/
+        ├── 📄 minigames.html
         ├── 📁 snake/
         │       ├── 📄 snake.html
         │       └── 📄 config.js
-        ├── 📁 buscaminas/
-        │       ├── 📄 buscaminas.html
+        ├── 📁 minesweeper/
+        │       ├── 📄 minesweeper.html
         │       └── 📄 config.js
-        └── 📁 ajedrez/
-                ├── 📄 ajedrez.html
+        └── 📁 chess/
+                ├── 📄 chess.html
                 └── 📄 config.js
 ```
 
 ---
 
-## Página de inicio
+## Home page
 
-### Objetivo
+### Goal
 
-- Presentar la página al usuario con una pantalla de inicio de sesión (versión de prueba).
-- Aplicar una estética con colores degradados entre morado, azul y negro.
+- Present the site to the user with a login screen (test version).
+- Apply a look based on gradient colors between purple, blue and black.
 
-### Explicación de contenidos
+### Contents
 
-- **`index.html`:** es la página principal y la primera que ve el usuario. Contiene el formulario de inicio de sesión, donde se accede con una cuenta personal. Esta cuenta permite proteger los datos del usuario y guardar su progreso en los juegos.
-- **`css.html`:** contiene los estilos de la página, es decir, cómo se ve: colores, degradados, tipografías, tamaños y disposición de los elementos. Al estar separado del contenido, cambiar el aspecto de la web no obliga a tocar el resto de archivos.
+- **`index.html`:** the main page and the first one the user sees. It contains the login form, where users sign in with a personal account. The account protects the user's data and saves their progress in the games.
+- **`styles.css`:** contains the styles of the site, that is, how it looks: colors, gradients, fonts, sizes and layout of the elements. Since it is separate from the content, changing the look of the site does not require touching the other files.
 
-### Estructuración
+### Structure
 
 ```
 📂 openhub/
 ├── 📄 index.html
-└── 📄 css.html
+└── 📄 styles.css
 ```
 
 ---
 
-## Página de menú
+## Menu page
 
-### Objetivo
+### Goal
 
-- Permitir la selección de minijuegos.
-- Ofrecer la configuración de idioma y de perfil.
+- Let the user select minigames.
+- Offer language and profile settings.
 
-### Explicación de contenidos
+### Contents
 
-- **`menu.html`:** es la pantalla que aparece tras iniciar sesión. Funciona como un catálogo de juegos en el que cada uno se muestra con:
-  - Una **imagen de portada**.
-  - Una **breve descripción** de en qué consiste.
-  - Un **manual de uso** con los controles y las reglas.
-- Desde este menú el usuario también puede **cambiar el idioma** de la página y **editar su perfil** (nombre, datos de la cuenta, etc.).
+- **`menu.html`:** the screen shown after logging in. It works as a game catalog in which each game is displayed with:
+  - A **cover image**.
+  - A **short description** of what the game is about.
+  - A **user manual** with the controls and rules.
+- From this menu the user can also **change the language** of the site and **edit their profile** (name, account details, etc.).
 
-### Estructuración
+### Structure
 
 ```
 📂 openhub/
 ├── 📄 index.html
-├── 📄 css.html
-└── 📁 menusjuegos/
+├── 📄 styles.css
+└── 📁 menu/
         └── 📄 menu.html
 ```
 
 ---
 
-## Carpeta de imágenes
+## Images folder
 
-### Objetivo
+### Goal
 
-- Reunir en un único lugar todos los recursos gráficos de la página, para mantenerlos ordenados y localizarlos fácilmente.
+- Keep all the graphic resources of the site in a single place, so they stay organized and easy to find.
 
-### Explicación de contenidos
+### Contents
 
-La carpeta `imagenes/` se divide en cuatro subcarpetas según el uso de cada recurso:
+The `images/` folder is divided into four subfolders according to the use of each resource:
 
-- **`logo/`:** el logotipo de OpenHub en distintos formatos y tamaños (por ejemplo, para la cabecera de la página o para la pestaña del navegador).
-- **`fondos/`:** imágenes de fondo y texturas que acompañan a los degradados morado, azul y negro.
-- **`iconos/`:** iconos pequeños de la interfaz, como los de idioma, perfil, ajustes o cerrar sesión.
-- **`portadas/`:** una imagen representativa de cada minijuego (por ejemplo, `snake.png`, `buscaminas.png` y `ajedrez.png`), que se muestra en el menú de selección.
+- **`logo/`:** the OpenHub logo in different formats and sizes (for example, for the page header or the browser tab).
+- **`backgrounds/`:** background images and textures that go with the purple, blue and black gradients.
+- **`icons/`:** small interface icons, such as those for language, profile, settings or logout.
+- **`covers/`:** a representative image of each minigame (for example, `snake.png`, `minesweeper.png` and `chess.png`), shown in the selection menu.
 
-> **Nota para colaboradores:** las imágenes que se añadan al proyecto deben ser propias o tener una licencia compatible con la del repositorio.
+> **Note for contributors:** images added to the project must be your own or have a license compatible with the repository's license.
 
-### Estructuración
+### Structure
 
 ```
 📂 openhub/
 ├── 📄 index.html
-├── 📄 css.html
-├── 📁 menusjuegos/
+├── 📄 styles.css
+├── 📁 menu/
 │       └── 📄 menu.html
-└── 📁 imagenes/
+└── 📁 images/
         ├── 📁 logo/
-        ├── 📁 fondos/
-        ├── 📁 iconos/
-        └── 📁 portadas/
+        ├── 📁 backgrounds/
+        ├── 📁 icons/
+        └── 📁 covers/
 ```
 
 ---
 
-## Carpeta de minijuegos
+## Minigames folder
 
-### Objetivo
+### Goal
 
-- Reunir todos los minijuegos del proyecto. Cada uno tiene su propia carpeta, con su archivo HTML y sus archivos JS o de configuración.
+- Gather all the project's minigames. Each one has its own folder, with its HTML file and its JS or configuration files.
 
-### Explicación de contenidos
+### Contents
 
-- **`minijuegos.html`:** archivo común a todos los juegos. Sirve de punto de conexión entre el menú y cada minijuego.
-- **Carpeta de cada juego** (`snake/`, `buscaminas/`, `ajedrez/`...): contiene todo lo necesario para que ese juego funcione de forma independiente:
-  - **Archivo HTML** (`snake.html`, `buscaminas.html`...): la estructura visual del juego.
-  - **`config.js`:** la programación y los ajustes del juego, como la lógica, las reglas, la dificultad y las puntuaciones. Al estar todo en un mismo lugar, cualquier persona puede abrir la carpeta de un juego, entenderlo y mejorarlo sin afectar al resto.
-- Para **añadir un juego nuevo** basta con crear una carpeta con su HTML y su JS, y darlo de alta en el menú.
+- **`minigames.html`:** a file shared by all the games. It acts as the connection point between the menu and each minigame.
+- **Each game's folder** (`snake/`, `minesweeper/`, `chess/`...): contains everything needed for that game to work independently:
+  - **HTML file** (`snake.html`, `minesweeper.html`...): the visual structure of the game.
+  - **`config.js`:** the programming and settings of the game, such as logic, rules, difficulty and scores. Since everything is in one place, anyone can open a game's folder, understand it and improve it without affecting the rest.
+- To **add a new game**, just create a folder with its HTML and JS files, and register it in the menu.
 
-### Estructuración
+### Structure
 
 ```
 📂 openhub/
 ├── 📄 index.html
-├── 📄 css.html
-├── 📁 imagenes/
-├── 📁 menusjuegos/
+├── 📄 styles.css
+├── 📁 images/
+├── 📁 menu/
 │       └── 📄 menu.html
-└── 📁 juegos/
-        ├── 📄 minijuegos.html
+└── 📁 games/
+        ├── 📄 minigames.html
         ├── 📁 snake/
         │       ├── 📄 snake.html
         │       └── 📄 config.js
-        ├── 📁 buscaminas/
-        │       ├── 📄 buscaminas.html
+        ├── 📁 minesweeper/
+        │       ├── 📄 minesweeper.html
         │       └── 📄 config.js
-        └── 📁 ajedrez/
-                ├── 📄 ajedrez.html
+        └── 📁 chess/
+                ├── 📄 chess.html
                 └── 📄 config.js
 ```
 
 ---
 
-## Contribuir
+## Contributing
 
-Las contribuciones son bienvenidas: corrección de errores, mejoras en los juegos, nuevos minijuegos, traducciones o sugerencias.
+Contributions are welcome: bug fixes, game improvements, new minigames, translations or suggestions.
 
-1. Haz un *fork* del repositorio.
-2. Crea una rama para tu cambio (`git checkout -b mi-mejora`).
-3. Guarda tus cambios (`git commit -m "Descripción del cambio"`).
-4. Envía tu rama (`git push origin mi-mejora`).
-5. Abre un *pull request* explicando qué has cambiado y por qué.
+1. Fork the repository.
+2. Create a branch for your change (`git checkout -b my-improvement`).
+3. Commit your changes (`git commit -m "Describe your change"`).
+4. Push your branch (`git push origin my-improvement`).
+5. Open a pull request explaining what you changed and why.
 
-Al enviar código, aceptas que se publique bajo la misma licencia del proyecto (`AGPL-3.0-or-later`).
+By submitting code, you agree that it will be published under the same license as the project (`AGPL-3.0-or-later`).
 
-Para incluir la licencia en tus archivos, añade esta línea al principio de cada archivo de código:
+To include the license in your files, add this line at the top of every code file:
 
 ```
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -189,14 +189,14 @@ Para incluir la licencia en tus archivos, añade esta línea al principio de cad
 
 ---
 
-## Privacidad y seguridad
+## Privacy and security
 
-- Las cuentas y los datos de guardado de los usuarios **no forman parte del repositorio**.
-- No subas nunca contraseñas, claves de acceso ni bases de datos al repositorio.
-- Si encuentras un fallo de seguridad, avisa de forma privada al autor antes de hacerlo público.
+- User accounts and save data are **not part of the repository**.
+- Never upload passwords, access keys or databases to the repository.
+- If you find a security issue, please report it privately to the author before making it public.
 
 ---
 
-## Autor
+## Author
 
-Proyecto creado por un programador valenciano, con las ganas de seguir aprendiendo programación web.
+Project created by a developer from Valencia, eager to keep learning web programming.
